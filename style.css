@@ -1,42 +1,17 @@
 *{
-    font-family: "Mitr", sans-serif;
+    background-color: rgb(255,242,216);
 }
+.quiz-box{
 
-.carousel-item{
-    height: 500px;
-}
+    border : 2px solid black ;
+    margin: 10px;
+    padding: 10px;
+    border-radius : 10px ;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 5px 1px gray;
 
-.carousel-image-1{
-    background-image: url('https://cdn.pixabay.com/photo/2024/03/05/10/38/boat-8614314_1280.jpg');
-    background-size: cover;
-}
+    width : 75% ; 
+    height : 300 px ;
 
-.carousel-image-2{
-    background-image: url('https://cdn.pixabay.com/photo/2016/11/29/04/19/ocean-1867285_1280.jpg');
-    background-size: cover;
-}
-
-.carousel-image-3{
-    background-image: url('https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547_1280.jpg');
-    background-size: cover;
-}
-
-#content-about{
-    height: 330px;
-    position: relative;
-    background-image: url('https://cdn.pixabay.com/photo/2016/11/29/08/51/city-1868530_1280.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    text-align: center;
-    color:#fff;
-    background-attachment: fixed;
-}
-
-.dark-overlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    height: 100%;
+   
 }

@@ -50,6 +50,7 @@
     width : 100% ; 
 
     border : 2px solid red ;
+    flex-direction: column;
 }
 .quiz-btn{
     
@@ -62,8 +63,4 @@
     border-radius : 10px ;
 
     background-color: #FFCC99;
-
-    width : 80% ; 
-    height : 300 px ;
-    
 }

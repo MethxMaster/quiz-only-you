@@ -64,7 +64,7 @@ dialogue_con_11 = "สนับสนุนค่ากาแฟ Developer ไ�
 dialogue_con_12 = "ไม่เป็นไร ชั้นกลับไปสะสมแต้มบุญใหม่ก่อน ไว้จะมาใหม่นะ ชั้นจะเป็นความสบายใจเทอเอง เพราะอย่างงั้นก็เป็นตัวของตัวเองได้เลย"
 
 ans_1_1 = "เดินทางไปพร้อมกันนะ"
-ans_1_2 = ""
+ans_1_2 = "aa"
 ans_1_3 = "เข้าไปกรอบพร้อมให้คำมั่นสัญญา"
 ans_1_4 = "ดาบในตำนานอย่างกับนักรบในหนังสือนิยาย"
 ans_1_5 = "หญิงสาว/ชายหนุ่ม หน้าตางดงาม ที่พร้อมจะทำตามทุกอย่างที่คุณสั่งอย่างเต็มใจ"
@@ -218,15 +218,18 @@ let story_type = Array("I","S","Q","Q","Q","Q","Q","Q","Q","Q","S","Q","Q","S","
 
 
 
-
 let content_story = document.getElementById('content-story');
 let btn_ans_1 = document.getElementById('ans-1');
 let btn_ans_2 = document.getElementById('ans-2');
 let btn_ans_3 = document.getElementById('ans-3');
 let btn_ans_4 = document.getElementById('ans-4');
 
+// const answers = [ans_1, ans_2, ans_3, ans_4]; 
+const buttons = [btn_ans_1, btn_ans_2, btn_ans_3, btn_ans_4]; 
+
 let dia_num = -1
 
+<<<<<<< Updated upstream
 function next_dia(){
 
     dia_num += 1
@@ -250,12 +253,38 @@ function next_dia(){
     }
 
 
+=======
+const questions = [];
+
+function next_dia(event){
+    
+>>>>>>> Stashed changes
     dia_num += 1
     content_story.innerText = whole_story[dia_num];
-    btn_ans_1.value = ans_1[dia_num];
-    btn_ans_2.value = ans_2[dia_num];
-    btn_ans_3.value = ans_3[dia_num];
-    btn_ans_4.value = ans_4[dia_num];
+    btn_ans_1.innerText = ans_1[dia_num];
+    btn_ans_2.innerText = ans_2[dia_num];
+    btn_ans_3.innerText = ans_3[dia_num];
+    btn_ans_4.innerText = ans_4[dia_num];
+    
+    let clickedButtonId = event.target.id;
+    console.log("ปุ่มที่ถูกคลิก: " + clickedButtonId);
+    console.log("dia_num " + dia_num);
+    if(dia_num == 2) {
+        dia_num = 18;
+
+    }
+
+    for (let index = 0; index < 3; index++) {
+    
+        console.log('answers[index][dia_num] ',buttons[index] )
+        if(buttons[index].innerText == "")
+        {
+            buttons[index].style.display = "none";
+        }else {
+            buttons[index].style.display = "block";
+        }
+        
+    }
 }
 
 

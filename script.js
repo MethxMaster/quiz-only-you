@@ -247,6 +247,7 @@ function next_dia(event){
     let clickedButtonId = event.target.id;
     console.log("ปุ่มที่ถูกคลิก: " + clickedButtonId);
     console.log("dia_num " + dia_num);
+    console.log("susu ");
     // Will you be my gf --------------
     //Said yes
     if(((dia_num >= 26) && (dia_num<=28)) && event.target.id == "ans-1") {

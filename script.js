@@ -30,7 +30,7 @@ console.log('test')
 */
 
 
-dialogue_story_1 = "แบบทดสอบบุคลิกภาพชุดนี้สร้างขึ้นด้วยความรู้สึกที่เต็มเปี่ยมอย่างยิ่งของเรา ทุกวิธีคิด ทุกก้าวเดิน เราเชื่อว่า เราจะสัมผัสมันได้อย่างอบอุ่นและอ่อนโยน มาเริ่มเดินทางไปพร้อมๆกันนะ"
+dialogue_intro = "แบบทดสอบบุคลิกภาพชุดนี้สร้างขึ้นด้วยความรู้สึกที่เต็มเปี่ยมอย่างยิ่งของเรา ทุกวิธีคิด ทุกก้าวเดิน เราเชื่อว่า เราจะสัมผัสมันได้อย่างอบอุ่นและอ่อนโยน มาเริ่มเดินทางไปพร้อมๆกันนะ"
 dialogue_story_1 = "ในดินแดนที่รุ่งเรืองและอุดมสมบูรณ์ในอดีตกาล ธรรมชาติที่เขียวขจี ผู้คนและชาวบ้านเคยอยู่กันอย่างมีความสุข ปัจจุบันภาพเหล่านี้เริ่มเลือนลางและกำลังจะหายไป เมื่อมีอะไรบางอย่างที่ไม่ทราบแน่ชัดได้พรากมันไป คุณพร้อมที่จะยืนหยัดต่อสู้หรือไม่ หากคุณพร้อม ดวงจิตของฉันจะคัดสรรและมอบพลังแก่คุณ"
 dialogue_story_2 = "ภายในถ้ำมืดสนิท คุณเดินพลัดตกเหวสลบไม่ได้สติเป็นเวลาหลายชั่วโมง ทันใดนั้นใครบางคนมาปลุกคุณขึ้นจากความฝัน คุณพบว่าเป็นสาวร่างเล็กมีออร่าสีทองสว่างๆอ่อนๆประกายมาจากตัวเธอ เธอพูดกับคุณว่า 'ท่านเป็นผู้กล้าในรอบหลายร้อยปีที่ได้เข้ามายังสถานที่แห่งนี้ ต่อจากนี้ท่านจะต้องพบเจอกับความสุข ความทุกข์ ความสนุก และความอันตรายอีกมาก '' 'ข้าจะให้พรแก่ท่าน 1 ข้อ' "
 dialogue_story_3 = "สิ้นคำกล่าวของคุณ หญิงสาวร่างเล็กผู้นั้นโปรยผงบางอย่างที่มีแสงเจิดจ้าลงบนตัวพวกคุณทุกคน ทันใดนั้นนางก็หายตัวจากไป"
@@ -140,11 +140,9 @@ ans_4_19 = ""
 ans_4_20 = ""
 ans_4_21 = ""
 
-let whole_story = Array(dialogue_story_1,dialogue_q_1,dialogue_q_2,dialogue_q_3,dialogue_q_4,dialogue_q_5,dialogue_q_6,dialogue_q_7,dialogue_q_8,
+let whole_story = Array(dialogue_intro,dialogue_story_1,dialogue_q_1,dialogue_q_2,dialogue_q_3,dialogue_q_4,dialogue_q_5,dialogue_q_6,dialogue_q_7,dialogue_q_8,
     dialogue_story_2,dialogue_q_9,dialogue_q_10,dialogue_story_3,dialogue_story_4,dialogue_q_11,dialogue_story_5,dialogue_q_12,dialogue_story_6,
     dialogue_story_7,dialogue_con_1);
-
-
 
 let ans_1 = Array(ans_1_1,ans_1_2,ans_1_3,ans_1_4,ans_1_5,ans_1_6,ans_1_7,ans_1_8,ans_1_9,ans_1_10,ans_1_11,ans_1_12,ans_1_13,ans_1_14,ans_1_15,ans_1_16,
     ans_1_17,ans_1_18,ans_1_19,ans_1_20,ans_1_21,)
@@ -171,10 +169,10 @@ let dia_num = -1
 function next_dia(){
     dia_num += 1
     content_story.innerText = whole_story[dia_num];
-    btn_ans_1.innerText = ans_1[dia_num];
-    btn_ans_2.innerText = ans_2[dia_num];
-    btn_ans_3.innerText = ans_3[dia_num];
-    btn_ans_4.innerText = ans_4[dia_num];
+    btn_ans_1.value = ans_1[dia_num];
+    btn_ans_2.value = ans_2[dia_num];
+    btn_ans_3.value = ans_3[dia_num];
+    btn_ans_4.value = ans_4[dia_num];
 }
 
 

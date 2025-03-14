@@ -18,7 +18,7 @@
 
    /* border : 2px solid red ;*/
     margin: 10px;
-    margin-top: 100px;
+    margin-top: 50px;
     padding: 10px;
     border-radius : 10px ;
     background-color: white;
@@ -45,15 +45,15 @@
 
 }
 .quiz-btn-box{
-    display: inline-block;
+    display: flex;
     justify-content: center;
     width : 100% ; 
 
-    /*border : 2px solid red ;*/
+    border : 2px solid red ;
 }
 .quiz-btn{
     
-    border : 2px solid #FFCC99 ;
+    border : 2px solid green ;
     color: black;
 
     font-weight: 500;

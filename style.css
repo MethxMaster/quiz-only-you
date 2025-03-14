@@ -49,12 +49,12 @@
     justify-content: center;
     width : 100% ; 
 
-    border : 2px solid red ;
+    /*border : 2px solid red ;*/
     flex-direction: column;
 }
 .quiz-btn{
     
-    border : 2px solid green ;
+    /*border : 2px solid green ;*/
     color: black;
 
     font-weight: 500;

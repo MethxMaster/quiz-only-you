@@ -229,36 +229,10 @@ const buttons = [btn_ans_1, btn_ans_2, btn_ans_3, btn_ans_4];
 
 let dia_num = -1
 
-<<<<<<< Updated upstream
-function next_dia(){
-
-    dia_num += 1
-    if(story_type[dia_num]=="I"){
-        btn_ans_1.disabled = true;
-        btn_ans_2.disabled = true;
-        btn_ans_3.disabled = true;
-        btn_ans_4.disabled = true;
-    }
-    else if(story_type[dia_num]=="S"){
-        btn_ans_1.disabled = false;
-        btn_ans_2.disabled = true;
-        btn_ans_3.disabled = true;
-        btn_ans_4.disabled = true;
-    }
-    else if(story_type[dia_num]=="Q"){
-        btn_ans_1.disabled = false;
-        btn_ans_2.disabled = false;
-        btn_ans_3.disabled = false;
-        btn_ans_4.disabled = false;
-    }
-
-
-=======
 const questions = [];
 
 function next_dia(event){
     
->>>>>>> Stashed changes
     dia_num += 1
     content_story.innerText = whole_story[dia_num];
     btn_ans_1.innerText = ans_1[dia_num];

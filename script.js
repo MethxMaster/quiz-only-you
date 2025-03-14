@@ -216,7 +216,7 @@ let ans_4 = Array(ans_4_1,ans_4_2,ans_4_3,ans_4_4,ans_4_5,ans_4_6,ans_4_7,ans_4_
 
 let story_type = Array("S","S","Q","Q","Q","Q","Q","Q","Q","Q","S","Q","Q","S","S","Q","S","Q","S","S","S","S","S","S","S","S","C","C","C","S","S","S")
 
-
+let imgShow = [1,11,14,15,17,19,20,23,31]
 
 let content_story = document.getElementById('content-story');
 let btn_ans_1 = document.getElementById('ans-1');
@@ -227,7 +227,7 @@ let btn_ans_4 = document.getElementById('ans-4');
 // const answers = [ans_1, ans_2, ans_3, ans_4]; 
 const buttons = [btn_ans_1, btn_ans_2, btn_ans_3, btn_ans_4]; 
 
-let dia_num = -1
+let dia_num = 0
 
 const questions = [];
 
@@ -243,8 +243,6 @@ function next_dia(event){
     let clickedButtonId = event.target.id;
     console.log("ปุ่มที่ถูกคลิก: " + clickedButtonId);
     console.log("dia_num " + dia_num);
-
-
     // Will you be my gf --------------
     //Said yes
     if(((dia_num >= 26) && (dia_num<=28)) && event.target.id == "ans-1") {
@@ -259,6 +257,15 @@ function next_dia(event){
 
 
     for (let index = 0; index < 3; index++) {
+        if (imgShow.includes(dia_num)) {
+            document.getElementById("myImage").style.display = "block";
+            document.getElementById("myImage").src = `photo/${dia_num}.jpg`;
+        } else {
+            document.getElementById("myImage").style.display = "none";
+        }
+    }
+
+    for (let index = 0; index < 4; index++) {
     
         console.log('answers[index][dia_num] ',buttons[index] )
         if(buttons[index].innerText == "")
@@ -270,8 +277,3 @@ function next_dia(event){
         
     }
 }
-
-
-
-
-

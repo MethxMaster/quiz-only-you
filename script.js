@@ -220,9 +220,9 @@ let ans_4 = Array(ans_4_1,ans_4_2,ans_4_3,ans_4_4,ans_4_5,ans_4_6,ans_4_7,ans_4_
     ans_4_17,ans_4_18,ans_4_19,ans_4_20,ans_4_21,ans_4_22,ans_4_23,ans_4_24,ans_4_25,ans_4_26,
     ans_4_27,ans_4_28,ans_4_29,ans_4_30,ans_4_31,ans_4_32,ans_4_33)
 
-let story_type = Array("S","S","Q","Q","Q","Q","Q","Q","Q","Q","S","Q","Q","S","S","Q","S","Q","S","S","S","S","S","S","S","S","C","C","C","S","S","S")
+//let story_type = Array("S","S","Q","Q","Q","Q","Q","Q","Q","Q","S","Q","Q","S","S","Q","S","Q","S","S","S","S","S","S","S","S","C","C","C","S","S","S")
 
-let imgShow = [1,10,13,14,16,18,19,22,30]
+let imgShow = [1,10,13,14,16,18,19,22,29,30]
 
 let content_story = document.getElementById('content-story');
 let btn_ans_1 = document.getElementById('ans-1');
@@ -238,6 +238,22 @@ let dia_num = 0
 const questions = [];
 
 function next_dia(event){
+
+
+    // Will you be my gf --------------
+    //Said yes
+    if(((dia_num >= 26) && (dia_num<=28)) && event.target.id == "ans-1") {
+        dia_num = 28;
+    }
+    //Said no
+    if(dia_num==28 && event.target.id == "ans-2") {
+        dia_num = 30;
+    }
+    if(dia_num==31 && event.target.id == "ans-1") {
+        dia_num = 29;
+    }
+    //---------------------------------
+
     
     dia_num += 1
     content_story.innerText = whole_story[dia_num];
@@ -249,17 +265,7 @@ function next_dia(event){
     let clickedButtonId = event.target.id;
     console.log("ปุ่มที่ถูกคลิก: " + clickedButtonId);
     console.log("dia_num " + dia_num);
-    // Will you be my gf --------------
-    //Said yes
-    if(((dia_num >= 26) && (dia_num<=28)) && event.target.id == "ans-1") {
-        dia_num = 28;
-    }
 
-    //Said no
-    if(((dia_num >= 26) && (dia_num<=28)) && event.target.id == "ans-2") {
-        dia_num = 30;
-    }
-    //---------------------------------
 
 
     for (let index = 0; index < 3; index++) {
